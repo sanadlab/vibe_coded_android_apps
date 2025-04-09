@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![GitHub issues](https://img.shields.io/github/issues/sanadlab/vibe_coded_android_apps)](https://github.com/sanadlab/vibe_coded_android_apps/issues)
 [![GitHub forks](https://img.shields.io/github/forks/sanadlab/vibe_coded_android_apps)](https://github.com/sanadlab/vibe_coded_android_apps/network)
-[![GitHub stars](https://img.shields.io/github/stars/sanadlab/vibe_coded_android_apps)](https://github.com/sanadlab/vibe_coded_android_apps/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/sanadlab/vibe_coded_android_apps)](https://github.com/sanadlab/vibe_coded_android_apps/issues/stargazers)
 
 ---
 
