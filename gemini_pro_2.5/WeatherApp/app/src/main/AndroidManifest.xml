@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sanad.gemini_2_dot_5_pro_preview.weatherapp">  <!-- !! REPLACE WITH YOUR ACTUAL PACKAGE NAME !! -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Geocoder needs coarse (keep it for city search fallback) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Required for getting precise current location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WeatherApp"
+        tools:targetApi="31">
+        <!-- Make sure @style/Theme.WeatherApp matches your theme definition
+             in res/values/themes.xml -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <!--
+                 android:exported="true" is required for activities with LAUNCHER intent filters
+                 starting from Android 12 (API 31).
+                 android:windowSoftInputMode="stateHidden" attempts to keep the keyboard
+                 hidden initially. adjustPan helps prevent the keyboard from covering input fields.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Optional: Declare services or other components here if needed -->
+
+    </application>
+
+</manifest>

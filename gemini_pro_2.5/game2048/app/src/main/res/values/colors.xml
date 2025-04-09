@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 2048 Game Specific Colors -->
+    <color name="grid_background">#BBADA0</color>
+    <color name="cell_empty_background">#CDC1B4</color>
+    <color name="text_dark">#776E65</color>
+    <color name="text_light">#F9F6F2</color>
+
+    <color name="tile_2">#EEE4DA</color>
+    <color name="tile_4">#EDE0C8</color>
+    <color name="tile_8">#F2B179</color>
+    <color name="tile_16">#F59563</color>
+    <color name="tile_32">#F67C5F</color>
+    <color name="tile_64">#F65E3B</color>
+    <color name="tile_128">#EDCF72</color>
+    <color name="tile_256">#EDCC61</color>
+    <color name="tile_512">#EDC850</color>
+    <color name="tile_1024">#EDC53F</color>
+    <color name="tile_2048">#EDC22E</color>
+    <color name="tile_other">#3C3A32</color> <!-- For higher tiles -->
+
+</resources>

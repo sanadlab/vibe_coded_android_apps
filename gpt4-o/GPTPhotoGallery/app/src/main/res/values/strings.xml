@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PhotoGallery</string>
+    <string-array name="layout_options">
+        <item>Grid</item>
+        <item>List</item>
+    </string-array>
+</resources>

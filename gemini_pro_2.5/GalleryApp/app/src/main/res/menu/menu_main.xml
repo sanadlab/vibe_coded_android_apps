@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_switch_layout"
+        android:title="Switch to List"
+        android:icon="@drawable/ic_view_list"
+        app:showAsAction="ifRoom" />
+    <!-- You'll need to create icons ic_view_list and ic_view_grid -->
+
+</menu>

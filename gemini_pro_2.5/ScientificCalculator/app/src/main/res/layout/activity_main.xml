@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/display_background"
+        android:gravity="end|center_vertical"
+        android:padding="16dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp"
+        android:maxLines="2"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TableLayout
+        android:id="@+id/buttonTableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView">
+
+        <!-- Row 1: Functions -->
+        <TableRow>
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonSin" android:text="sin" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonCos" android:text="cos" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonTan" android:text="tan" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonLog" android:text="log" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonLn" android:text="ln" />
+        </TableRow>
+
+        <!-- Row 2: Functions & Clear -->
+        <TableRow>
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonSqrt" android:text="√" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonPower" android:text="^" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonFactorial" android:text="!" />
+            <Button style="@style/CalculatorButton.Clear" android:id="@+id/buttonClear" android:text="C" />
+            <Button style="@style/CalculatorButton.Operator" android:id="@+id/buttonBackspace" android:text="DEL"/>
+        </TableRow>
+
+        <!-- Row 3: Numbers & Operators -->
+        <TableRow>
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button7" android:text="7" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button8" android:text="8" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button9" android:text="9" />
+            <Button style="@style/CalculatorButton.Operator" android:id="@+id/buttonDivide" android:text="/" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonOpenParen" android:text="(" />
+
+        </TableRow>
+
+        <!-- Row 4: Numbers & Operators -->
+        <TableRow>
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button4" android:text="4" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button5" android:text="5" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button6" android:text="6" />
+            <Button style="@style/CalculatorButton.Operator" android:id="@+id/buttonMultiply" android:text="*" />
+            <Button style="@style/CalculatorButton.Function" android:id="@+id/buttonCloseParen" android:text=")" />
+        </TableRow>
+
+        <!-- Row 5 & 6: Combine lower numbers, operators, and equals -->
+        <TableRow>
+            <!-- Column 1 -->
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button1" android:text="1" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button2" android:text="2" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button3" android:text="3" />
+            <Button style="@style/CalculatorButton.Operator" android:id="@+id/buttonSubtract" android:text="-" />
+
+            <!-- Column 5: Equals button spanning 2 rows -->
+            <Button style="@style/CalculatorButton.Equals" android:id="@+id/buttonEquals" android:text="=" />
+        </TableRow>
+
+        <TableRow>
+            <!-- Column 1 -->
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/button0" android:text="0" />
+            <Button style="@style/CalculatorButton.Numeric" android:id="@+id/buttonDot" android:text="." />
+            <Button style="@style/CalculatorButton.Operator" android:id="@+id/buttonPercent" android:text="%" /> <!-- Consider how % should work (e.g., /100) -->
+            <Button style="@style/CalculatorButton.Operator" android:id="@+id/buttonAdd" android:text="+" />
+            <!-- Column 5 is occupied by Equals -->
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

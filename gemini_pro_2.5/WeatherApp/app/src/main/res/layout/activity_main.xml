@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <!-- Input Row -->
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:hint="Enter City Name"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            app:layout_constraintEnd_toStartOf="@+id/buttonGetWeather"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonGetWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:minWidth="60dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editTextCity"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Current Location Button -->
+        <Button
+            android:id="@+id/buttonCurrentLocation"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Use Current Location"
+            app:icon="@android:drawable/ic_menu_mylocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
+
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCurrentLocation"
+            tools:visibility="visible" />
+
+
+        <!-- Current Weather Info Display Area -->
+        <LinearLayout
+            android:id="@+id/currentWeatherInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCurrentLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/textViewCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                tools:text="City Name" />
+
+            <TextView
+                android:id="@+id/textViewTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:text="25°C" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAllCaps="true"
+                tools:text="Clear Sky" />
+
+            <TextView
+                android:id="@+id/textViewWind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Wind: 5 m/s" />
+        </LinearLayout>
+
+        <!-- Forecast Display Area -->
+        <TextView
+            android:id="@+id/textViewForecastLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Forecast"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentWeatherInfoLayout"/>
+
+        <LinearLayout
+            android:id="@+id/forecastLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewForecastLabel">
+
+            <!-- Forecast Day 1 -->
+            <LinearLayout style="@style/ForecastDayLayout">
+                <TextView android:id="@+id/forecast_day1_date" style="@style/ForecastDateText" tools:text="MON, APR 8"/>
+                <ImageView android:id="@+id/forecast_day1_icon" style="@style/ForecastIcon" tools:src="@android:drawable/ic_menu_help"/> <!-- Placeholder -->
+                <TextView android:id="@+id/forecast_day1_desc" style="@style/ForecastDescText" tools:text="Partly Cloudy"/>
+                <TextView android:id="@+id/forecast_day1_temp" style="@style/ForecastTempText" tools:text="15° / 8°"/>
+            </LinearLayout>
+
+            <!-- Forecast Day 2 -->
+            <LinearLayout style="@style/ForecastDayLayout">
+                <TextView android:id="@+id/forecast_day2_date" style="@style/ForecastDateText" tools:text="TUE, APR 9"/>
+                <ImageView android:id="@+id/forecast_day2_icon" style="@style/ForecastIcon" tools:src="@android:drawable/ic_menu_help"/>
+                <TextView android:id="@+id/forecast_day2_desc" style="@style/ForecastDescText" tools:text="Rain Showers"/>
+                <TextView android:id="@+id/forecast_day2_temp" style="@style/ForecastTempText" tools:text="12° / 5°"/>
+            </LinearLayout>
+
+            <!-- Forecast Day 3 -->
+            <LinearLayout style="@style/ForecastDayLayout">
+                <TextView android:id="@+id/forecast_day3_date" style="@style/ForecastDateText" tools:text="WED, APR 10"/>
+                <ImageView android:id="@+id/forecast_day3_icon" style="@style/ForecastIcon" tools:src="@android:drawable/ic_menu_help"/>
+                <TextView android:id="@+id/forecast_day3_desc" style="@style/ForecastDescText" tools:text="Sunny"/>
+                <TextView android:id="@+id/forecast_day3_temp" style="@style/ForecastTempText" tools:text="18° / 9°"/>
+            </LinearLayout>
+
+            <!-- Add more LinearLayouts for more forecast days if desired -->
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
