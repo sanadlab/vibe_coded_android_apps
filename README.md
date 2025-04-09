@@ -99,14 +99,14 @@ Here are the applications generated, allowing for direct comparison between the 
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/sanadlab/vibe_coded_android_apps.git
+    cd vibe_coded_android_apps
     ```
 
 2.  **Open a Specific App Project in Android Studio:**
     *   Launch Android Studio.
     *   Select "Open" or "Open an Existing Project".
-    *   Navigate to and select the directory of the *specific application* you want to run (e.g., `your-repo-name/gemini_pro_2.5/WeatherApp` or `your-repo-name/gpt4-o/GPTGame2048`).
+    *   Navigate to and select the directory of the *specific application* you want to run (e.g., `gemini_pro_2.5/WeatherApp` or `gpt4-o/GPTGame2048`).
     *   **Do NOT open the root repository folder or the LLM folder (`gemini_pro_2.5`, `gpt4-o`) as the project.**
 
 3.  **Sync Gradle:** Android Studio should prompt you to sync the project's Gradle files. If not, click `File > Sync Project with Gradle Files`. This downloads dependencies.
