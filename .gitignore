@@ -1,0 +1,84 @@
+# Lines starting with '#' are comments.
+
+# Built application files
+*.apk
+*.aab
+*.ap_
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files and directories
+# Ignore build directories in project roots and app modules
+*/build/
+build/
+
+# Ignore .gradle cache directories within each project
+*/.gradle/
+.gradle/
+
+# Ignore generated Android Studio/IntelliJ files
+*/.idea/
+.idea/
+
+# Android Studio Navigation editor files
+*/nav_graphs/navigation.xml.orig
+
+# Android Studio captures folder
+*/captures/
+captures/
+
+# Log files
+*.log
+
+# Local configuration file (sensitive, contains SDK path, API keys, etc.)
+# This will ignore local.properties in ALL subdirectories (e.g., gemini_pro_2.5/WeatherApp/local.properties)
+local.properties
+
+# Keystore files (sensitive)
+*.jks
+*.keystore
+
+# Google Services (often downloaded, can contain sensitive info)
+*/google-services.json
+google-services.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Gradle files
+.gradletasknamecache
+gradle-wrapper.jar # Often ignored, gradlew script downloads it if missing
+
+# Explicitly ignore common IDE/tool files if they somehow appear at the root
+/.idea/
+/.gradle/
+
+# Older Eclipse/Ant generated files (just in case)
+gen/
+bin/
+out/
+*.iml # IntelliJ module files (less common with Gradle-only structure)
+*.ipr
+*.iws
+
+# Crashlytics generated files
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Heap dump files
+*.hprof
+
+# Lint generated files
+lint/reports/*
+
+# Backup files
+*~
+*.bak
+*.swp
